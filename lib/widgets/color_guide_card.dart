@@ -39,7 +39,7 @@ class ColorGuideItem {
     return [
       ColorGuideItem(
         color: Colors.red,
-        icon: Icons.fireplace,          // Using Flutter icons
+        icon: Icons.fireplace,
         title: 'Fire Emergency',
         pattern: 'Rapid flashing',
         severity: 'EMERGENCY',
@@ -70,7 +70,7 @@ class ColorGuideItem {
         description: 'Microwave cooking cycle has finished.',
       ),
       ColorGuideItem(
-        color: const Color(0xFF0D47A1), // Dark blue
+        color: const Color(0xFF0D47A1),
         icon: Icons.water_damage,
         title: 'Water Leak',
         pattern: 'Fast pulse',
@@ -106,7 +106,6 @@ class ColorGuideItem {
 }
 
 /// Card widget for displaying color guide information
-/// Shows color, icon, pattern, and description for each alert type
 class ColorGuideCard extends StatelessWidget {
   final ColorGuideItem guide;
 
@@ -135,6 +134,39 @@ class ColorGuideCard extends StatelessWidget {
             Text(guide.description),
           ],
         ),
+      ),
+    );
+  }
+}
+
+/// Full screen that displays all color guide cards
+class ColorGuideScreen extends StatelessWidget {
+  const ColorGuideScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final guides = ColorGuideItem.getAllGuides();
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Color Guide',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        elevation: 0,
+      ),
+      body: ListView(
+        padding: const EdgeInsets.all(16),
+        children: [
+          const Text(
+            'Each alert is assigned a specific color and flashing pattern for instant recognition.',
+            style: TextStyle(fontSize: 16, height: 1.5),
+          ),
+          const SizedBox(height: 24),
+
+          // Display all guides
+          ...guides.map((guide) => ColorGuideCard(guide: guide)),
+        ],
       ),
     );
   }
