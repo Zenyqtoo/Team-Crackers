@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/setting_card.dart';
 
-/// Settings screen for customizing alert behavior and app preferences
 /// Allows users to personalize their experience based on their needs
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({Key? key}) : super(key: key);

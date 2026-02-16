@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Model class for color guide items
 /// Provides information about each alert type's visual appearance
 class ColorGuideItem {
   final Color color;          // LED color for this alert

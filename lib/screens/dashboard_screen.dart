@@ -6,7 +6,6 @@ import '../widgets/emergency_banner.dart';
 import '../widgets/status_card.dart';
 import '../widgets/alert_card.dart';
 
-/// Dashboard screen showing real-time alerts and system status
 /// This is the main screen users see when opening the app
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -16,7 +15,7 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
-  // List of current alerts
+
   List<AlertEvent> alerts = [];
   
   // Timer for simulating random alerts (for demonstration)
@@ -73,8 +72,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     }
   }
 
-  /// Manually triggers a fire emergency alert
-  /// Used for testing the emergency alert system
+  /// Manually triggers a fire emergency alert that is used for testing the emergency alert system
   void _triggerEmergency() {
     setState(() {
       alerts.insert(0, AlertEvent.fireEmergency());
@@ -104,10 +102,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // Filter to show only active alerts
+
     final activeAlerts = alerts.where((a) => a.isActive).toList();
     
-    // Check if there's an emergency alert
+
     final hasEmergency = activeAlerts.any((a) => a.severity == AlertSeverity.emergency);
 
     return Scaffold(
@@ -118,7 +116,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         ),
         elevation: 0,
         actions: [
-          // Notification icon (could show unread count)
+
           IconButton(
             icon: const Icon(Icons.notifications_active),
             onPressed: () {
@@ -130,7 +128,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
       body: Column(
         children: [
           // Emergency banner - shown when emergency alert is active
-          // Takes full width and pulses to grab attention
           if (hasEmergency)
             EmergencyBanner(
               alert: activeAlerts.firstWhere(

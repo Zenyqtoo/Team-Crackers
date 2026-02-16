@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'screens/main_screen.dart';
 
-/// Entry point of the Silent Guardian application
-/// This app provides visual alerts for deaf and hard-of-hearing individuals
 void main() {
   runApp(const SilentGuardianApp());
 }
 
-/// Root application widget
 /// Configures theme, navigation, and app-wide settings
 class SilentGuardianApp extends StatelessWidget {
   const SilentGuardianApp({Key? key}) : super(key: key);

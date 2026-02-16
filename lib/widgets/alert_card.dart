@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import '../models/alert_event.dart';
 import 'flashing_color_indicator.dart';
 
-/// Alert card widget that displays a single alert
-/// Dismissible by swiping, includes flashing color indicator
 class AlertCard extends StatelessWidget {
   final AlertEvent alert;
   final VoidCallback onDismiss;
@@ -17,13 +15,13 @@ class AlertCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Dismissible(
-      // Unique key for dismissible widget
+
       key: Key(alert.id),
       
-      // Called when user swipes to dismiss
+
       onDismissed: (_) => onDismiss(),
       
-      // Red background shown while swiping
+
       background: Container(
         margin: const EdgeInsets.only(bottom: 12),
         decoration: BoxDecoration(
@@ -41,9 +39,9 @@ class AlertCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(12),
-          // Border matches the alert color
+
           border: Border.all(color: alert.color, width: 2),
-          // Colored shadow for additional visual emphasis
+
           boxShadow: [
             BoxShadow(
               color: alert.color.withOpacity(0.2),

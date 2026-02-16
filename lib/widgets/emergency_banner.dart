@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/alert_event.dart';
 
-/// Emergency banner widget that displays at the top of the dashboard
 /// Pulses and flashes to immediately grab the user's attention
 class EmergencyBanner extends StatefulWidget {
   final AlertEvent alert;

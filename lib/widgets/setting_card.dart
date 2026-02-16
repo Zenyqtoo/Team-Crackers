@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Card widget wrapper for settings items
-/// Provides consistent styling for all settings options
 class SettingCard extends StatelessWidget {
   final Widget child;
 

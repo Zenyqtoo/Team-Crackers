@@ -5,7 +5,6 @@ import 'package:silent_guardian/screens/devices_screen.dart';
 import 'package:silent_guardian/screens/settings_screen.dart';
 import'package:silent_guardian/widgets/color_guide_card.dart';
 
-/// Main screen with bottom navigation bar
 /// Serves as the container for all major app sections
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/alert_event.dart';
 
-/// Animated color indicator that flashes according to the alert pattern
 /// Provides visual feedback of how the LEDs would flash in real life
 class FlashingColorIndicator extends StatefulWidget {
   final Color color;

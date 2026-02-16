@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/device.dart';
 
-/// Card widget for displaying device information
 /// Shows device type, status, and connection info
 class DeviceCard extends StatelessWidget {
   final Device device;

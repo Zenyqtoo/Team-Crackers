@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:silent_guardian/models/device.dart';
 import 'package:silent_guardian/widgets/device_card.dart';
 
-/// Devices screen showing all connected smart home devices
 /// Allows users to monitor and manage their device network
 class DevicesScreen extends StatefulWidget {
   const DevicesScreen({Key? key}) : super(key: key);

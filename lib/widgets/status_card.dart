@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Status card widget for displaying key metrics on the dashboard
-/// Shows information like active alerts count and device status
 class StatusCard extends StatelessWidget {
   final String title;      // Label (e.g., "Active Alerts")
   final String value;      // Main value to display
